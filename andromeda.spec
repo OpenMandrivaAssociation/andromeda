@@ -39,5 +39,5 @@ popd
 %{_datadir}/applications/%{name}.desktop
 %doc bugs.txt features.txt TODO.txt
 %if %{mdvver} <= 201100
-%{datadir}/%{name}/translations/
+%{_datadir}/%{name}/translations/
 %endif
