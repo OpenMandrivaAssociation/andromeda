@@ -1,12 +1,11 @@
 Name:		andromeda
 Summary:	Qt file manager
-Version:	0.1
+Version:	0.2.1
 Release:	1
 License:	LGPL
 Group:		Graphical desktop/Other
 URL:		https://gitorious.org/andromeda/andromeda/
 Source0:	%{name}-%{version}.tar.xz
-Patch0:		andromeda-0.1-mdv-linkage.patch
 BuildRequires:	cmake
 BuildRequires:	libqt4-devel
 
@@ -16,7 +15,7 @@ filesystem (i.e. file:// protocol), simple web view and bookmarks plugins.
 
 %prep
 %setup -q
-%patch0 -p1
+find . -type f -name '*.h' -o -name '*.cpp' -exec chmod 644 {} \;
 
 %build
 %cmake -DCMAKE_SKIP_RPATH:BOOL=OFF
@@ -37,7 +36,7 @@ popd
 %{_libdir}/%{name}/
 %{_datadir}/pixmaps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
-%doc bugs.txt features.txt TODO.txt
+%doc TODO.txt
 %if %{mdvver} <= 201100
 %{_datadir}/%{name}/translations/
 %endif
