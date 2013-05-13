@@ -7,7 +7,7 @@ Group:		Graphical desktop/Other
 URL:		https://gitorious.org/andromeda/andromeda/
 Source0:	%{name}-%{version}.tar.xz
 BuildRequires:	cmake
-BuildRequires:	libqt4-devel
+BuildRequires:	pkgconfig(Qt3Support)
 
 %description
 Cross-platform file manager, written on Qt. Currently has support for local
