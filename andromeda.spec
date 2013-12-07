@@ -1,7 +1,7 @@
 Name:		andromeda
 Summary:	Qt file manager
 Version:	0.2.1
-Release:	4
+Release:	5
 License:	LGPL
 Group:		Graphical desktop/Other
 URL:		https://gitorious.org/andromeda/andromeda/
